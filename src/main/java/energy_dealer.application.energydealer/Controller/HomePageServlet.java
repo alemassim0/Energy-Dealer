@@ -3,8 +3,8 @@ package energy_dealer.application.energydealer.Controller;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
-import sentimental_sips.application.sentimentalsips.Model.Entity.Carello;
-import sentimental_sips.application.sentimentalsips.Model.Service.ProdottoService;
+import energy_dealer.application.energydealer.Model.Entity.Carrello;
+import energy_dealer.application.energydealer.Model.Service.ProdottoService;
 import java.io.IOException;
 
 @WebServlet(name = "HomePageServlet", value = "/HomePage")
