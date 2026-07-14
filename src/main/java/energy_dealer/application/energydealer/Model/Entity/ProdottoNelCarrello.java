@@ -20,7 +20,7 @@ public class ProdottoNelCarrello {
         this.quantita_selezionata = quantita_selezionata;
     }
 
-    public void ProdottoNelCarrello(Prodotto prodotto,  int quantita_selezionata){
+    public void ProdottoNelCarrello(Prodotto prodotto,  int quantita_selezionata) {
         this. prodotto = prodotto;
         this.quantita_selezionata = quantita_selezionata;
     }
