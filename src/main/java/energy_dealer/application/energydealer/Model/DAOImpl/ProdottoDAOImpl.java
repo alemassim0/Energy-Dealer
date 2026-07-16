@@ -2,6 +2,7 @@ package energy_dealer.application.energydealer.Model.DAOImpl;
 
 import energy_dealer.application.energydealer.Model.DAO.ProdottoDAO;
 import energy_dealer.application.energydealer.Model.Entity.Prodotto;
+import energy_dealer.application.energydealer.Model.Service.DBConnection;
 
 import java.sql.*;
 import java.util.ArrayList;
