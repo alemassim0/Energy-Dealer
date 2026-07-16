@@ -7,6 +7,7 @@ import energy_dealer.application.energydealer.Model.DAOImpl.CategoriaDAOImpl;
 import energy_dealer.application.energydealer.Model.DAOImpl.ImmagineDAOImpl;
 import energy_dealer.application.energydealer.Model.DAOImpl.ProdottoDAOImpl;
 import energy_dealer.application.energydealer.Model.Entity.*;
+import energy_dealer.application.energydealer.Controller.ProductPaginationController;
 
 import java.io.IOException;
 import java.sql.SQLException;
