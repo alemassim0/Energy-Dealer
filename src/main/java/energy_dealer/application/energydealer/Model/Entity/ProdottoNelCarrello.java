@@ -4,6 +4,11 @@ public class ProdottoNelCarrello {
     private Prodotto prodotto;
     private int quantita_selezionata;
 
+    public ProdottoNelCarrello(Prodotto prodotto, int quantita_selezionata) {
+        this.prodotto = prodotto;
+        this.quantita_selezionata = quantita_selezionata;
+    }
+
     public Prodotto getProdotto() {
         return prodotto;
     }
@@ -17,11 +22,6 @@ public class ProdottoNelCarrello {
     }
 
     public void setQuantita_selezionata(int quantita_selezionata) {
-        this.quantita_selezionata = quantita_selezionata;
-    }
-
-    public void ProdottoNelCarrello(Prodotto prodotto,  int quantita_selezionata) {
-        this. prodotto = prodotto;
         this.quantita_selezionata = quantita_selezionata;
     }
 
