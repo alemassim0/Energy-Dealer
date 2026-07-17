@@ -1,0 +1,88 @@
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    gap: 2rem
+}
+
+.flex-item {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
+}
+
+.flex-item-prodotto {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.2rem
+}
+
+.flex-item-prodotto-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.flex-item-selected_products {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+img {
+    object-fit: cover;
+    border-radius: .5rem;
+    max-width: 100%;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: rgb(53, 47, 54);
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 100;
+    color: rgb(53, 47, 54);
+}
+
+.button-quantity {
+    display: flex;
+    align-items: center;
+    font-family: "Wix Madefor", sans-serif;
+    height: 2rem;
+    background: none;
+    border: none;
+    width: fit-content;
+}
+
+.button-quantity:focus {
+    background-color: rgb(255, 214, 214);
+}
+
+.button-quantity:hover {
+    background-color: rgb(255, 214, 214);
+}
+
+.button-aggiungi {
+    font-family: "Wix Madefor", sans-serif;
+    color: rgb(53, 47, 54);
+    background: none;
+    border-style: solid;
+    border-radius: 3px;
+    border-color: rgb(135, 133, 162);
+    padding: 0.5rem;
+}
+
+.button-aggiungi:hover {
+    background-color: rgb(255, 214, 214);
+}
