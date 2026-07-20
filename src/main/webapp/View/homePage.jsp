@@ -70,6 +70,4 @@
 <jsp:include page="Components/footer.jsp"/>
 <!-- Inclusione del footer della pagina -->
 </body>
-<script src="${pageContext.request.contextPath}/resources/js/HomePage/homePage.js"></script>
-<!-- Inclusione di uno script JavaScript -->
 </html>
