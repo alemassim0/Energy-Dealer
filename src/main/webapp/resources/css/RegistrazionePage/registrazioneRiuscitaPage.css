@@ -1,28 +1,156 @@
+
+/* =========================================
+   ENERGY DEALER - REGISTRATION SUCCESS
+   Dark Premium + Neon
+========================================= */
+
 main {
+    min-height: calc(100vh - 150px);
+    padding: 50px 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 3rem;
+    justify-content: center;
+    text-align: center;
+    background:
+            radial-gradient(ellipse at 50% 40%, rgba(52, 120, 246, 0.13), transparent 55%),
+            #101216;
+    color: #F5F6F8;
 }
 
-h1 {
+/* =========================================
+   SUCCESS CARD
+========================================= */
+
+main > h1,
+main > h2 {
+    width: 100%;
+    max-width: 550px;
+    box-sizing: border-box;
+    background: #191E26;
+}
+
+main > h1 {
+    position: relative;
+    margin: 0;
+    padding: 45px 35px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-bottom: none;
+    border-radius: 20px 20px 0 0;
+    color: #F5F6F8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(1.8rem, 4vw, 2.5rem);
+    font-weight: 800;
+}
+
+/* Success icon */
+
+main > h1::before {
+    content: "✓";
+    width: 65px;
+    height: 65px;
+    margin: 0 auto 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(52, 196, 120, 0.13);
+    border: 2px solid #34C478;
+    color: #34C478;
     font-size: 2rem;
-    font-weight: 100;
-    color: rgb(53, 47, 54);
+    font-weight: 800;
+    box-shadow: 0 0 25px rgba(52, 196, 120, 0.12);
 }
 
-h2 {
-    font-size: 2rem;
-    font-weight: 100;
-    color: rgb(53, 47, 54);
+/* Email */
+
+main > h2:first-of-type {
+    margin: 0;
+    padding: 10px 35px 25px;
+    border: none;
+    color: #A0A8B5;
+    font-size: 1rem;
+    font-weight: 500;
+    overflow-wrap: anywhere;
 }
 
-h2 a {
-    cursor: pointer;
+/* Login action container */
+
+main > h2:last-of-type {
+    margin: 0;
+    padding: 0 35px 40px;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-top: none;
+    border-radius: 0 0 20px 20px;
+}
+
+/* Login link styled as button */
+
+main > h2:last-of-type a {
+    min-height: 50px;
+    padding: 14px 24px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    background: linear-gradient(110deg, #3478F6, #245ED0);
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 800;
+    letter-spacing: 0.4px;
     text-decoration: none;
-    font-size: 2rem;
-    font-weight: 100;
-    color: rgb(116, 116, 183);
+    transition: all 0.25s ease;
+    box-shadow: 0 7px 20px rgba(52, 120, 246, 0.2);
+}
+
+main > h2:last-of-type a:hover {
+    background: linear-gradient(110deg, #FF7A24, #E85E12);
+    box-shadow: 0 8px 24px rgba(255, 122, 36, 0.25);
+    transform: translateY(-2px);
+}
+
+main > h2:last-of-type a:active {
+    transform: scale(0.98);
+}
+
+main > h2:last-of-type a:focus-visible {
+    outline: 3px solid #FF7A24;
+    outline-offset: 3px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media screen and (max-width: 480px) {
+    main {
+        padding: 35px 16px;
+    }
+
+    main > h1 {
+        padding: 35px 20px 12px;
+        font-size: 1.8rem;
+    }
+
+    main > h1::before {
+        width: 55px;
+        height: 55px;
+        font-size: 1.7rem;
+    }
+
+    main > h2:first-of-type {
+        padding: 10px 20px 25px;
+        font-size: 0.9rem;
+    }
+
+    main > h2:last-of-type {
+        padding: 0 20px 30px;
+    }
+
+    main > h2:last-of-type a {
+        width: 100%;
+        font-size: 0.82rem;
+    }
 }

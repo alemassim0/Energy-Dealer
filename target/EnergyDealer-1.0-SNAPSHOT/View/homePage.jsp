@@ -23,7 +23,7 @@
 <!-- Inclusione dell'header della pagina -->
 
 <main>
-    <img class="home-background-image" src="${pageContext.request.contextPath}/resources/img/*inserire-immagine*"
+    <img class="home-background-image" src="${pageContext.request.contextPath}/resources/img/background.png"
          alt="background-image">
     <!-- Immagine di sfondo della home page -->
 
@@ -70,6 +70,4 @@
 <jsp:include page="Components/footer.jsp"/>
 <!-- Inclusione del footer della pagina -->
 </body>
-<script src="${pageContext.request.contextPath}/resources/js/HomePage/homePage.js"></script>
-<!-- Inclusione di uno script JavaScript -->
 </html>

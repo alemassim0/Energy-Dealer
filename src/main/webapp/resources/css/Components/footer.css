@@ -1,0 +1,127 @@
+
+/* =========================================
+   ENERGY DEALER - FOOTER
+   Dark Premium + Neon
+========================================= */
+
+footer {
+    width: 100%;
+    min-height: 110px;
+    padding: 25px 7%;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+
+    background: #191E26;
+    border-top: 1px solid rgba(52, 120, 246, 0.25);
+    color: #F5F6F8;
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+.brand-name a {
+    color: #F5F6F8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.45rem;
+    font-weight: 800;
+    letter-spacing: -0.5px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.brand-name a:hover {
+    color: #3478F6;
+}
+
+/* =========================================
+   FOOTER LINKS
+========================================= */
+
+.footer-content {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.footer-content .link {
+    position: relative;
+    color: #A0A8B5;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-content .link::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 0;
+    height: 2px;
+    background: #FF7A24;
+    transition: width 0.25s ease;
+}
+
+.footer-content .link:hover {
+    color: #F5F6F8;
+}
+
+.footer-content .link:hover::after {
+    width: 100%;
+}
+
+/* Keyboard accessibility */
+
+.brand-name a:focus-visible,
+.footer-content .link:focus-visible {
+    outline: 2px solid #FF7A24;
+    outline-offset: 5px;
+    border-radius: 2px;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media screen and (max-width: 768px) {
+    footer {
+        padding: 25px 5%;
+    }
+
+    .footer-content {
+        gap: 22px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media screen and (max-width: 520px) {
+    footer {
+        flex-direction: column;
+        justify-content: center;
+        gap: 18px;
+        padding: 28px 20px;
+        text-align: center;
+    }
+
+    .brand-name a {
+        font-size: 1.3rem;
+    }
+
+    .footer-content {
+        justify-content: center;
+        gap: 28px;
+    }
+
+    .footer-content .link {
+        font-size: 0.85rem;
+    }
+}

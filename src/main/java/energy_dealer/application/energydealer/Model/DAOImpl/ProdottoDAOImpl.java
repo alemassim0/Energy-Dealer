@@ -16,9 +16,13 @@ public class ProdottoDAOImpl implements ProdottoDAO {
         try {
             DBConnection db = new DBConnection();
             connection = db.getConnection();
-        } catch (SQLException sqlException) {
-            System.out.println("Failed to create prodottoDAOImpl");
-            sqlException.printStackTrace();
+
+            System.out.println("CONNESSIONE MYSQL RIUSCITA!");
+
+        } catch (SQLException e) {
+            System.err.println("ERRORE CONNESSIONE MYSQL:");
+            e.printStackTrace();
+            throw new RuntimeException(e);
         }
     }
 

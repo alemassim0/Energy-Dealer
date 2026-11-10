@@ -1,0 +1,248 @@
+
+/* =========================================
+   ENERGY DEALER - HEADER
+   Dark Premium + Neon
+========================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    min-height: 76px;
+    padding: 0 7%;
+    box-sizing: border-box;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+
+    background: rgba(16, 18, 22, 0.96);
+    border-bottom: 1px solid rgba(52, 120, 246, 0.25);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(12px);
+}
+
+/* =========================================
+   BRAND
+========================================= */
+
+header .brand-name {
+    flex-shrink: 0;
+}
+
+header .brand-name a {
+    color: #F5F6F8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.65rem;
+    font-weight: 800;
+    letter-spacing: -0.8px;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+header .brand-name a:hover {
+    color: #3478F6;
+}
+
+/* =========================================
+   HEADER CONTENT
+========================================= */
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 25px;
+}
+
+/* =========================================
+   NAVIGATION ICONS
+========================================= */
+
+.nav-icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.nav-icons .icon {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+    background: transparent;
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.nav-icons .icon a {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    color: #A0A8B5;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.nav-icons .icon i {
+    font-size: 23px;
+}
+
+.nav-icons .icon:hover {
+    background: rgba(52, 120, 246, 0.13);
+    transform: translateY(-2px);
+}
+
+.nav-icons .icon:hover a {
+    color: #3478F6;
+}
+
+/* =========================================
+   MENU TOGGLE
+========================================= */
+
+.menu-toggle {
+    width: 44px;
+    height: 44px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    background: #191E26;
+
+    color: #F5F6F8;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.menu-toggle i {
+    font-size: 25px;
+}
+
+.menu-toggle:hover {
+    background: #3478F6;
+    border-color: #3478F6;
+    color: #FFFFFF;
+}
+
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+header a:focus-visible,
+.menu-toggle:focus-visible {
+    outline: 2px solid #FF7A24;
+    outline-offset: 4px;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media screen and (max-width: 768px) {
+    header {
+        min-height: 68px;
+        padding: 0 5%;
+        gap: 15px;
+    }
+
+    header .brand-name a {
+        font-size: 1.4rem;
+    }
+
+    .header-content {
+        gap: 12px;
+    }
+
+    .nav-icons {
+        gap: 5px;
+    }
+
+    .nav-icons .icon {
+        width: 40px;
+        height: 40px;
+    }
+
+    .nav-icons .icon i {
+        font-size: 21px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media screen and (max-width: 520px) {
+    header {
+        min-height: 64px;
+        padding: 0 16px;
+        gap: 10px;
+    }
+
+    header .brand-name a {
+        font-size: 1.25rem;
+    }
+
+    .header-content {
+        gap: 5px;
+    }
+
+    .nav-icons {
+        gap: 2px;
+    }
+
+    .nav-icons .icon {
+        width: 34px;
+        height: 38px;
+        border-radius: 9px;
+    }
+
+    .nav-icons .icon i {
+        font-size: 19px;
+    }
+
+    .menu-toggle {
+        width: 38px;
+        height: 38px;
+    }
+
+    .menu-toggle i {
+        font-size: 22px;
+    }
+}
+
+/* =========================================
+   VERY SMALL SCREENS
+========================================= */
+
+@media screen and (max-width: 360px) {
+    header {
+        padding: 0 10px;
+    }
+
+    header .brand-name a {
+        font-size: 1.1rem;
+    }
+
+    .nav-icons .icon {
+        width: 30px;
+    }
+
+    .nav-icons .icon i {
+        font-size: 17px;
+    }
+}

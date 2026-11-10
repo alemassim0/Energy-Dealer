@@ -1,96 +1,261 @@
+
+/* =========================================
+   ENERGY DEALER - REGISTRATION PAGE
+   Dark Premium + Neon
+========================================= */
+
 main {
-    flex: 1;
+    min-height: calc(100vh - 150px);
+    width: 100%;
+    padding: 55px 20px 65px;
     display: flex;
     flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background:
+            radial-gradient(ellipse at 50% 20%, rgba(52, 120, 246, 0.12), transparent 55%),
+            #101216;
+    color: #F5F6F8;
 }
 
+/* =========================================
+   PAGE TITLE
+========================================= */
+
 #sign-up-label {
-    font-size: 2.1rem;
+    margin: 0 0 12px;
+    color: #F5F6F8;
+    font-family: 'Montserrat', sans-serif;
+    font-size: clamp(2.2rem, 5vw, 3rem);
+    font-weight: 800;
+    letter-spacing: -1px;
+    text-align: center;
 }
+
+/* =========================================
+   LOGIN LINK
+========================================= */
 
 .log-in-text {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: center;
     align-items: center;
-    gap: 10px;
-    text-align: center;
-
-    h1 {
-        font-size: 1.2rem;
-    }
-
-    a {
-        font-size: 1.1rem;
-        text-decoration: none;
-        color: rgb(116, 116, 183);
-    }
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 7px;
+    margin-bottom: 25px;
 }
 
+.log-in-text h1 {
+    margin: 0;
+    color: #A0A8B5;
+    font-size: 0.95rem;
+    font-weight: 400;
+}
+
+.log-in-text a {
+    color: #3478F6;
+    font-size: 0.95rem;
+    font-weight: 700;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.log-in-text a:hover {
+    color: #FF7A24;
+    text-decoration: underline;
+}
+
+/* =========================================
+   REGISTRATION FORM
+========================================= */
+
 .register-form {
-    margin-top: 3%;
-    margin-bottom: 4%;
-    min-width: 15rem;
+    width: 100%;
+    max-width: 470px;
+    display: flex;
+    flex-direction: column;
+    padding: 35px;
+    gap: 12px;
+    background: #191E26;
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    border-radius: 20px;
+    box-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
+}
 
-    input {
-        padding: 3%;
-        display: flex;
-        flex-wrap: nowrap;
-        margin-bottom: 10%;
-        background-color: rgba(135, 133, 162, 0.2);
-        border-bottom-color: rgba(255, 255, 255, 0.7);
-        border-top: none;
-        border-right: none;
-        border-left: none;
-        outline: none;
-        height: 2rem;
-        width: 100%;
-    }
+/* Labels */
 
-    label {
-        padding: 2%;
-    }
+.register-form label {
+    margin-top: 8px;
+    color: #DCE1E9;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
 
-    button {
-        display: flex;
-        margin: auto;
-        font-family: "Wix Madefor", sans-serif;
-        height: 2rem;
-        background: none;
-        border-style: solid;
-        border-radius: 3px;
-        border-color: rgb(135, 133, 162);
-        width: 50%;
-        align-items: center;
-        justify-content: center;
-        flex-direction: column;
-        flex-wrap: nowrap;
-    }
+/* Input fields */
+
+.register-form input {
+    width: 100%;
+    min-height: 47px;
+    padding: 12px 14px;
+    box-sizing: border-box;
+    background: #101216;
+    border: 1px solid #303844;
+    border-radius: 9px;
+    color: #F5F6F8;
+    font-family: inherit;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.register-form input::placeholder {
+    color: #737D8C;
+}
+
+.register-form input:hover {
+    border-color: #526174;
+}
+
+.register-form input:focus {
+    border-color: #3478F6;
+    box-shadow: 0 0 0 3px rgba(52, 120, 246, 0.15);
+}
+
+/* =========================================
+   ERROR MESSAGES
+========================================= */
+
+.error-text {
+    width: 100%;
+    margin: 5px 0;
+    padding: 11px 13px;
+    box-sizing: border-box;
+    color: #FF8B8B;
+    background: rgba(255, 70, 70, 0.09);
+    border: 1px solid rgba(255, 70, 70, 0.22);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.5;
+}
+
+#password-error:empty,
+#email-error:empty {
+    display: none;
+}
+
+/* =========================================
+   SIGN UP BUTTON
+========================================= */
+
+#sign-up-button {
+    width: 100%;
+    min-height: 50px;
+    margin-top: 10px;
+    padding: 13px 20px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(110deg, #3478F6, #245ED0);
+    color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 800;
+    letter-spacing: 0.7px;
+    text-transform: uppercase;
+    cursor: pointer;
+    box-shadow: 0 7px 20px rgba(52, 120, 246, 0.2);
+    transition: all 0.25s ease;
 }
 
 #sign-up-button:hover {
-    background-color: rgb(255, 214, 214);
+    background: linear-gradient(110deg, #FF7A24, #E85E12);
+    box-shadow: 0 8px 24px rgba(255, 122, 36, 0.25);
+    transform: translateY(-2px);
 }
 
+#sign-up-button:active {
+    transform: scale(0.98);
+}
+
+/* =========================================
+   TERMS AND PRIVACY
+========================================= */
+
 .sign-up-text {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    gap: 0.3rem;
+    width: 100%;
+    max-width: 470px;
+    margin-top: 20px;
     text-align: center;
 }
 
 .sign-up-text h6 {
-    font-weight: 100;
+    margin: 8px 0;
+    color: #737D8C;
+    font-size: 0.72rem;
+    font-weight: 400;
+    line-height: 1.6;
 }
 
-.error-text {
-    font-weight: 400;
-    color: rgb(205, 93, 93);
+/* =========================================
+   ACCESSIBILITY
+========================================= */
+
+#sign-up-button:focus-visible,
+.log-in-text a:focus-visible,
+.register-form input:focus-visible {
+    outline: 2px solid #FF7A24;
+    outline-offset: 3px;
+}
+
+/* =========================================
+   RESPONSIVE - TABLET
+========================================= */
+
+@media screen and (max-width: 768px) {
+    main {
+        padding: 45px 20px;
+    }
+
+    .register-form {
+        max-width: 450px;
+        padding: 30px;
+    }
+}
+
+/* =========================================
+   RESPONSIVE - MOBILE
+========================================= */
+
+@media screen and (max-width: 480px) {
+    main {
+        padding: 35px 16px 45px;
+    }
+
+    #sign-up-label {
+        font-size: 2.2rem;
+    }
+
+    .log-in-text {
+        gap: 5px;
+    }
+
+    .log-in-text h1,
+    .log-in-text a {
+        font-size: 0.85rem;
+    }
+
+    .register-form {
+        padding: 24px 20px;
+        gap: 10px;
+        border-radius: 15px;
+    }
+
+    .register-form input {
+        min-height: 45px;
+        font-size: 0.9rem;
+    }
+
+    .sign-up-text h6 {
+        font-size: 0.68rem;
+    }
 }

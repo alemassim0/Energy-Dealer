@@ -23,7 +23,7 @@
 <!-- Inclusione dell'header della pagina -->
 
 <main>
-    <img class="home-background-image" src="${pageContext.request.contextPath}/resources/img/*inserire-immagine*"
+    <img class="home-background-image" src="${pageContext.request.contextPath}/resources/img/background.png"
          alt="background-image">
     <!-- Immagine di sfondo della home page -->
 
