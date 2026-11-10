@@ -1,0 +1,28 @@
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 3rem;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 100;
+    color: rgb(53, 47, 54);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 100;
+    color: rgb(53, 47, 54);
+}
+
+h2 a {
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 100;
+    color: rgb(116, 116, 183);
+}
