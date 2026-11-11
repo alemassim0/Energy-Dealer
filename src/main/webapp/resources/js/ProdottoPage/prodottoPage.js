@@ -115,10 +115,11 @@ let page = 1;
 document.addEventListener("DOMContentLoaded", function () {
     // Funzione per caricare una pagina di dati dal server
     //  Richiesta AJAX
+    const contextPath = document.body.dataset.contextPath;
     function loadPage() {
         let xhr = new XMLHttpRequest();
 
-        xhr.open("GET", "https://localhost:8443/immagini?page=" + page, true);
+        xhr.open("GET", contextPath + "/immagini?page=" + page, true);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {
                 if (xhr.status === 200) { // 200 OK

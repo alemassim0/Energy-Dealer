@@ -7,7 +7,7 @@
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/styles.css">
     <link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}/resources/css/ProdottoPage/prodottiPage.css">
 </head>
-<body>
+<body data-context-path="${pageContext.request.contextPath}">
 <jsp:include page="Components/header.jsp"/>
 <main>
     <h1>Prodotti</h1>

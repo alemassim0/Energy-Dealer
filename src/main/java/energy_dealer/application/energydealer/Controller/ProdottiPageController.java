@@ -1,3 +1,4 @@
+
 package energy_dealer.application.energydealer.Controller;
 
 import jakarta.servlet.ServletException;
@@ -14,19 +15,24 @@ public class ProdottiPageController extends HttpServlet {
 
     private ProdottoService prodottoService;
 
+    @Override
     public void init() {
         prodottoService = new ProdottoService();
     }
 
     @Override
-    protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request = prodottoService.validateAndReturnProdottoById(request, response);
+    protected void doGet(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
         prodottoService.getProductsForHomePage(request, response);
-        getServletContext().getRequestDispatcher("/View/prodottiPage.jsp").forward(request, response);
+
+        getServletContext()
+                .getRequestDispatcher("/View/prodottiPage.jsp")
+                .forward(request, response);
     }
 
     @Override
-    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
     }
 }

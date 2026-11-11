@@ -1,23 +1,34 @@
-// Aspetta che il DOM sia completamente caricato prima di eseguire il codice
+
+// Aspetta che il DOM sia completamente caricato
 document.addEventListener('DOMContentLoaded', function() {
-    // Seleziona l'elemento del pulsante di attivazione del menu
+
+    // Seleziona l'header
+    const header = document.querySelector('header');
+
+    // Seleziona il pulsante del menu
     const menuToggle = document.querySelector('.menu-toggle');
 
-    // Seleziona l'elemento contenitore delle icone di navigazione
+    // Seleziona il contenitore delle icone
     const navIcons = document.querySelector('.nav-icons');
 
-    // Aggiunge un listener per l'evento click al pulsante di attivazione del menu
-    menuToggle.addEventListener('click', function() {
-        // Attiva/disattiva la classe 'show' sul contenitore delle icone di navigazione
+    // Verifica che tutti gli elementi esistano
+    if (!header || !menuToggle || !navIcons) {
+        return;
+    }
+
+    // Apertura e chiusura del menu
+    menuToggle.addEventListener('click', function(event) {
+        event.stopPropagation();
         navIcons.classList.toggle('show');
     });
 
-    // Aggiunge un listener per l'evento click all'intero documento
+    // Chiusura del menu cliccando fuori dall'header
     document.addEventListener('click', function(event) {
-        // Controlla se il click è fuori dall'header e se il menu è aperto
-        if (!header.contains(event.target) && navIcons.classList.contains('show')) {
-            // Chiude il menu rimuovendo la classe 'show'
+        if (!header.contains(event.target) &&
+            navIcons.classList.contains('show')) {
+
             navIcons.classList.remove('show');
         }
     });
+
 });
