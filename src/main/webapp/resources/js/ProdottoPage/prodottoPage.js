@@ -1,3 +1,5 @@
+const contextPath = document.body.dataset.contextPath;
+
 // Funzione per inviare una richiesta al server per aggiungere un prodotto al carrello
 //  Funzione asincrona per l'invio di dati al server
 function askServerToAddProdotto() {
@@ -33,7 +35,7 @@ function askServerToAddProdotto() {
     let xhr = new XMLHttpRequest();
 
     // Configura la richiesta
-    xhr.open("POST", "https://localhost:8443/carrello", true);
+    xhr.open("POST", contextPath + "/carrello", true);
     xhr.setRequestHeader("Content-Type", "application/json");
 
     // Gestisce la risposta della richiesta
@@ -115,7 +117,6 @@ let page = 1;
 document.addEventListener("DOMContentLoaded", function () {
     // Funzione per caricare una pagina di dati dal server
     //  Richiesta AJAX
-    const contextPath = document.body.dataset.contextPath;
     function loadPage() {
         let xhr = new XMLHttpRequest();
 
@@ -155,7 +156,7 @@ function generateRowFromFetchedPage(response, prodotti, immagini, categorie) {
     prodotti.forEach(function (prodotto) {
         let row = document.createElement("tr");
         row.onclick = function () {
-            location.href = "/ProductPage?prodotto_id=" + prodotto.prodotto_id
+            location.href = contextPath + "/ProductPage?prodotto_id=" + prodotto.prodotto_id;
         }
 
         // Crea e aggiunge la cella per l'immagine

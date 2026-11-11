@@ -9,6 +9,7 @@ import org.mindrot.jbcrypt.BCrypt;
 import energy_dealer.application.energydealer.Model.DAO.UtenteDAO;
 import energy_dealer.application.energydealer.Model.DAOImpl.UtenteDAOImpl;
 import energy_dealer.application.energydealer.Model.Entity.Utente;
+import energy_dealer.application.energydealer.Model.Entity.Carrello;
 
 import java.io.IOException;
 import java.sql.SQLException;
@@ -156,6 +157,8 @@ public class LogInService {
         // The setAttribute method associates a specified value with the specified name in the session
         // Here, the user's role (utente.getRuolo()) is stored with the name "userEmail"
         session.setAttribute("userRole", utente.getRuolo());
+
+        session.setAttribute("carrello", new Carrello());
 
         // Sets the maximum inactive interval for the session to -1,
         // indicating that the session should never expire due to inactivity

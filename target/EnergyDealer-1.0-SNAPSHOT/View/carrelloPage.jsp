@@ -55,7 +55,7 @@
             </c:forEach>
         </div>
 
-        <div class="carrello-info" onclick="location.href = '/checkout'">
+        <div class="carrello-info" onclick="location.href = '${pageContext.request.contextPath}/checkout'">
             <div>
                 <h2>Sub Totale</h2>
                 <h2>€ <span id="subtotal"><fmt:formatNumber value="${prezzo_totale}" type="number" maxFractionDigits="2"

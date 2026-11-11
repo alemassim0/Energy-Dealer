@@ -13,15 +13,17 @@
           href="${pageContext.request.contextPath}/resources/css/ProdottoPage/prodottoPage.css">
 </head>
 
-<body>
+<body data-context-path="${pageContext.request.contextPath}">
 
 <jsp:include page="Components/header.jsp"/>
 
 <main>
 
     <div>
-        <%Immagine immagine = (Immagine) request.getAttribute("immagine"); %>
-        <img class="themed_background" src="<%= immagine.getUrl() %>" alt="Drink image should be here...">
+        <% Immagine immagine = (Immagine) request.getAttribute("immagine"); %>
+        <img class="themed_background"
+             src="${pageContext.request.contextPath}<%= immagine.getUrl() %>"
+             alt="Drink image should be here...">
     </div>
 
     <div class="flex-item">
